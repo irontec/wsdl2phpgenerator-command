@@ -1,0 +1,23 @@
+{
+    "name": "internet/wsdl2phpgenerator-cli-bundle",
+    "description": "Quick shortcut to wsdl2phpgenerator as a command in your Symfony 3.* project.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Wsdl2PhpGeneratorCliBundle\\": ["./"]
+        }
+    },
+    "require": {
+        "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4",
+        "symfony/framework-bundle": "^3.1",
+        "symfony/console": "^3.1"
+    },
+    "license": "EUPL v1.1",
+    "authors": [
+        {
+            "name": "Javier Infante",
+            "email": "jabi@irontec.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
