@@ -9,8 +9,8 @@
     },
     "require": {
         "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4",
-        "symfony/framework-bundle": "^3.1",
-        "symfony/console": "^3.1"
+        "symfony/framework-bundle": "3.*",
+        "symfony/console": "3.*"
     },
     "license": "EUPL v1.1",
     "authors": [
