@@ -33,13 +33,16 @@ class ParserCommand extends ContainerAwareCommand
                 'output',
                 null,
                 InputOption::VALUE_REQUIRED,
-                'Output Directory for generated classes'
+                'Output Directory for self generated classes'
             )
             ->addOption(
                 'ns',
                 null,
                 InputOption::VALUE_REQUIRED,
                 'Class Namespace Class\\Example'
+            )
+            ->addOption(
+                'shared-types'
             );
 
 
