@@ -1,10 +1,10 @@
 {
-    "name": "internet/wsdl2phpgenerator-cli-bundle",
-    "description": "Quick shortcut to wsdl2phpgenerator as a command in your Symfony 3.* project.",
+    "name": "internet/wsdl2phpgenerator-command-bundle",
+    "description": "Provides wsdl2phpgenerator/wsdl2phpgenerator as a command on your Symfony Project.",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Wsdl2PhpGeneratorCliBundle\\": ["./"]
+            "Wsdl2PhpGeneratorCommandBundle\\": ["./"]
         }
     },
     "require": {

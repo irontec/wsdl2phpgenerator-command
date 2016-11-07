@@ -1,6 +1,6 @@
 <?php
 
-namespace Wsdl2PhpGeneratorCliBundle\Command;
+namespace Wsdl2PhpGeneratorCommandBundle\Command;
 
 use Psr\Log\LogLevel;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
@@ -21,7 +21,7 @@ class ParserCommand extends ContainerAwareCommand
     protected function configure()
     {
         $this
-            ->setName('wsdl2php_generator_cli:parser')
+            ->setName('wsdl2phpgenerator:parser')
             ->setDescription('Parse remote WSDL, and create PHP Classes .')
             ->addOption(
                 'wsdl',
