@@ -19,7 +19,7 @@ Add the Wsdl2PhpGeneratorCommandBundle to your application's kernel:
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
             // ...
             
-            $bundles[] = new Internet\Wsdl2PhpGeneratorCommandBundle(),
+            $bundles[] = new Irontec\Wsdl2PhpGeneratorCommandBundle\Wsdl2PhpGeneratorCommandBundle(),
         );
         // ...
     }

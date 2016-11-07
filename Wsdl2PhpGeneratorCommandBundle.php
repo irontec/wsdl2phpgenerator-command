@@ -1,6 +1,6 @@
 <?php
 
-namespace Wsdl2PhpGeneratorCommandBundle;
+namespace Irontec\Bundle\Wsdl2PhpGeneratorCommandBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

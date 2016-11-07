@@ -4,7 +4,7 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Wsdl2PhpGeneratorCommandBundle\\": ["./"]
+            "Irontec\\Bundle\\Wsdl2PhpGeneratorCommandBundle\\": ""
         }
     },
     "require": {

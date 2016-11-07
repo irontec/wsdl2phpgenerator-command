@@ -1,6 +1,6 @@
 <?php
 
-namespace Wsdl2PhpGeneratorCommandBundle\Command;
+namespace Irontec\Bundle\Wsdl2PhpGeneratorCommandBundle\Command;
 
 use Psr\Log\LogLevel;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
