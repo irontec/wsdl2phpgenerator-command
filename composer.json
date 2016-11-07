@@ -1,5 +1,5 @@
 {
-    "name": "internet/wsdl2phpgenerator-command-bundle",
+    "name": "irontec/wsdl2phpgenerator-command-bundle",
     "description": "Provides wsdl2phpgenerator/wsdl2phpgenerator as a command on your Symfony Project.",
     "type": "library",
     "autoload": {
