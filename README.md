@@ -4,9 +4,10 @@ Provides [wsdl2phpgenerator/wsdl2phpgenerator (3.4)](https://github.com/wsdl2php
 
 ## Installation
 
-Require the `internet/wsdl2phpgenerator-command` package in your composer.json and update your dependencies.
+Require the `irontec/wsdl2phpgenerator-command-bundle` package in your composer.json and update your dependencies.
 
-    $ composer require internet/wsdl2phpgenerator-command
+    $ composer require irontec/wsdl2phpgenerator-command-bundle
+
 
 Add the Wsdl2PhpGeneratorCommandBundle to your application's kernel:
 
