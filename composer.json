@@ -10,7 +10,7 @@
     "require": {
         "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4",
         "symfony/framework-bundle": "3.* || 4.*",
-        "symfony/console": "3.*"
+        "symfony/console": "3.* || 4.*"
     },
     "license": "EUPL-1.1",
     "authors": [
