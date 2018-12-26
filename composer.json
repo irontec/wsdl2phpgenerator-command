@@ -7,8 +7,14 @@
             "Irontec\\Bundle\\Wsdl2PhpGeneratorCommandBundle\\": ""
         }
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/irontec/wsdl2phpgenerator"
+        }
+    ],
     "require": {
-        "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4",
+        "wsdl2phpgenerator/wsdl2phpgenerator": "dev-master",
         "symfony/framework-bundle": "3.* || 4.*",
         "symfony/console": "3.* || 4.*"
     },
