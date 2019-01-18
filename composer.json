@@ -16,7 +16,8 @@
     "require": {
         "wsdl2phpgenerator/wsdl2phpgenerator": "3.5.*",
         "symfony/framework-bundle": "3.* || 4.*",
-        "symfony/console": "3.* || 4.*"
+        "symfony/console": "3.* || 4.*",
+        "ext-soap": "*"
     },
     "license": "EUPL-1.1",
     "authors": [

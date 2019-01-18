@@ -58,7 +58,26 @@ class GenerateCommand extends ContainerAwareCommand
                 null,
                 InputOption::VALUE_NONE,
                'constructorParamsDefaultToNull value set to true'
-            );
+            )
+            ->addOption(
+                'user',
+                'u',
+                InputOption::VALUE_NONE,
+                'User'
+            )
+            ->addOption(
+                'password',
+                'p',
+                InputOption::VALUE_NONE,
+                'Password'
+            )
+            ->addOption(
+                'authentication',
+                'a',
+                InputOption::VALUE_NONE,
+                'The autentication method for getting the wsdl. Allowed values: SOAP_AUTHENTICATION_BASIC or SOAP_AUTHENTICATION_DIGEST. Default value: SOAP_AUTHENTICATION_BASIC'
+            )
+        ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -89,16 +108,37 @@ class GenerateCommand extends ContainerAwareCommand
             return 3;
         }
 
+        $user = $input->getOption('user');
+        $password = $input->getOption('password');
+
+        if(isset($user) != isset($password)) {
+            $logger->alert('Both or none user and password must be provided');
+        }
+
+        $config = array(
+            'inputFile' => $input->getOption('input'),
+            'outputDir' => $input->getOption('output'),
+            'namespaceName' => $input->getOption('namespace'),
+            'sharedTypes' => $input->getOption('shared-types'),
+            'constructorParamsDefaultToNull' => $input->getOption('constructorParamsDefaultToNull'),
+        );
+
+        if(isset($user) && isset($password)) {
+            $auth = SOAP_AUTHENTICATION_BASIC;
+            if($input->getOption('input') == 'SOAP_AUTHENTICATION_DIGEST') {
+                $auth = SOAP_AUTHENTICATION_DIGEST;
+            }
+            $config['soapClientOptions'] = array(
+                'login' => $user,
+                'password' => $password,
+                'connection_timeout' => 60,
+                'authentication' => $auth
+            );
+        }
         $generator = new Generator();
         $generator->setLogger($logger);
         $generator->generate(
-            new Config(array(
-                'inputFile' => $input->getOption('input'),
-                'outputDir' => $input->getOption('output'),
-                'namespaceName' => $input->getOption('namespace'),
-                'sharedTypes' => $input->getOption('shared-types'),
-                'constructorParamsDefaultToNull' => $input->getOption('constructorParamsDefaultToNull')
-            ))
+            new Config($config)
         );
 
 
