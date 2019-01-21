@@ -62,19 +62,19 @@ class GenerateCommand extends ContainerAwareCommand
             ->addOption(
                 'user',
                 'u',
-                InputOption::VALUE_NONE,
+                InputOption::VALUE_OPTIONAL,
                 'User'
             )
             ->addOption(
                 'password',
-                'p',
-                InputOption::VALUE_NONE,
+                'P',
+                InputOption::VALUE_OPTIONAL,
                 'Password'
             )
             ->addOption(
                 'authentication',
                 'a',
-                InputOption::VALUE_NONE,
+                InputOption::VALUE_OPTIONAL,
                 'The autentication method for getting the wsdl. Allowed values: SOAP_AUTHENTICATION_BASIC or SOAP_AUTHENTICATION_DIGEST. Default value: SOAP_AUTHENTICATION_BASIC'
             )
         ;
